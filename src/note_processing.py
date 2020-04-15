@@ -50,12 +50,12 @@ def extract_subclips(video):
 
     limits = get_limits([elm[:, 1] for elm in sound_splited])
 
-    plt.plot(sound_amplitude[:, 1], sound_amplitude[:, 0])
-    for start, end in limits:
-        color = (random(), random(), random())
-        plt.axvline(x=start, color=color)
-        plt.axvline(x=end, color=color)
-    plt.show()
+#    plt.plot(sound_amplitude[:, 1], sound_amplitude[:, 0])
+#    for start, end in limits:
+#        color = (random(), random(), random())
+#        plt.axvline(x=start, color=color)
+#        plt.axvline(x=end, color=color)
+#    plt.show()
 
     for t_start, t_end in limits:
         yield video.subclip(t_start, t_end)
